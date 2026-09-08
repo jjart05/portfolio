@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Johnnel Artiaga — IT Student &amp; Developer</title>
+<meta name="description" content="IT student in Cebu building full-stack web apps. Selected work includes Spotibai, a self-hosted music player, and Leaf &amp; Bloom, a hand-built storefront.">
+<meta name="author" content="Johnnel Artiaga">
+<meta name="theme-color" content="#0b0b10" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ff" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Johnnel Artiaga — IT Student &amp; Developer">
+<meta property="og:description" content="IT student in Cebu building full-stack web apps. Selected work includes Spotibai and Leaf &amp; Bloom.">
+<meta property="og:locale" content="en_PH">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Johnnel Artiaga — IT Student &amp; Developer">
+<meta name="twitter:description" content="IT student in Cebu building full-stack web apps. Selected work includes Spotibai and Leaf &amp; Bloom.">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<script>
+  /* Applied before first paint so the correct theme never flashes. */
+  (function () {
+    try {
+      var saved = localStorage.getItem("portfolio-theme");
+      if (saved === "dark" || saved === "light") {
+        document.documentElement.setAttribute("data-theme", saved);
+      }
+    } catch (e) { /* private browsing — fall back to the markup default */ }
+  })();
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Icon sprite. Referenced with <use href="#i-name">; never rendered itself. -->
+<svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.55v-1.96c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .96-.31 3.16 1.18a10.9 10.9 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .3.2.66.8.55A11.5 11.5 0 0 0 23.5 12A11.5 11.5 0 0 0 12 .5z"/>
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M6.94 5.5a2.44 2.44 0 1 1-4.88 0 2.44 2.44 0 0 1 4.88 0zM2.4 21.6h4.2V8.9H2.4v12.7zM9.3 8.9h4.02v1.74h.06c.56-1.06 1.93-2.18 3.97-2.18 4.25 0 5.03 2.8 5.03 6.43v6.71h-4.2v-5.95c0-1.42-.03-3.24-1.97-3.24-1.98 0-2.28 1.54-2.28 3.13v6.06H9.3V8.9z"/>
+    </symbol>
+    <symbol id="i-x" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.65l-5.21-6.82-5.96 6.82H1.69l7.49-8.56L1.02 2.25h6.82l4.85 6.41 5.55-6.41zm-1.16 17.52h1.83L6.99 4.13H5.03l12.05 15.64z"/>
+    </symbol>
+    <symbol id="i-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M10 13a5 5 0 0 0 7.07 0l3-3a5 5 0 0 0-7.07-7.07l-1.5 1.5"/>
+      <path d="M14 11a5 5 0 0 0-7.07 0l-3 3a5 5 0 0 0 7.07 7.07l1.5-1.5"/>
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/>
+    </symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m4 12.5 5.5 5.5L20 6"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M3.5 20h17"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 12h15m0 0-6-6m6 6-6 6"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4h6v6M20 4l-8.5 8.5"/><path d="M18 14.5V19a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4.5"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M18.7 5.3l-1.4 1.4M6.7 17.3l-1.4 1.4"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/>
+    </symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+      <path d="M4 7h16M4 12h16M4 17h16"/>
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+      <path d="M6 6l12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+      <rect x="3" y="3.5" width="18" height="17" rx="2.5"/><path d="M3 9h18M9 9v11.5"/>
+    </symbol>
+    <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3.5" width="18" height="7" rx="2"/><rect x="3" y="13.5" width="18" height="7" rx="2"/><path d="M7 7h.01M7 17h.01"/>
+    </symbol>
+    <symbol id="i-gauge" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+      <path d="M4 18a9 9 0 1 1 16 0"/><path d="m12 14 4-4"/><circle cx="12" cy="18" r="1.6" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21.5s7-5.9 7-11a7 7 0 1 0-14 0c0 5.1 7 11 7 11z"/><circle cx="12" cy="10.2" r="2.6"/>
+    </symbol>
+    <symbol id="i-quote" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M9.5 5C6 6.4 4 9.4 4 13.2 4 16.6 5.9 19 8.6 19c2.2 0 3.8-1.6 3.8-3.7 0-2-1.4-3.5-3.3-3.5-.4 0-.8.05-1 .13.3-1.8 1.7-3.4 3.6-4.3L9.5 5zm9 0c-3.5 1.4-5.5 4.4-5.5 8.2 0 3.4 1.9 5.8 4.6 5.8 2.2 0 3.8-1.6 3.8-3.7 0-2-1.4-3.5-3.3-3.5-.4 0-.8.05-1 .13.3-1.8 1.7-3.4 3.6-4.3L18.5 5z"/>
+    </symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2.5 8.5 12 4.5l9.5 4-9.5 4-9.5-4z"/><path d="M6 10.8V16c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-5.2"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- Edge progress + section index -->
+<div class="scroll-rail" aria-hidden="true">
+  <div class="scroll-rail__track"><span data-progress-bar></span></div>
+  <span class="scroll-rail__index" data-progress-index>01</span>
+</div>
+
+<div class="cursor" data-cursor hidden>
+  <span class="cursor__ring"></span>
+</div>
+
+<header class="site-header" data-header>
+  <div class="shell site-header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__name" data-bind="name">Johnnel Artiaga</span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <ul class="nav__list" data-nav>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Projects</a></li>
+        <li><a href="#experience">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <a class="btn btn--sm btn--primary header-cta" href="#contact">Get in touch</a>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="icon icon--menu" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon icon--close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav" data-mobile-nav hidden>
+    <a href="#about">About</a>
+    <a href="#work">Projects</a>
+    <a href="#experience">Journey</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" data-hero>
+    <canvas class="hero__canvas" data-bg-canvas aria-hidden="true"></canvas>
+    <div class="hero__perspective" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--a" aria-hidden="true"></div>
+    <div class="hero__orb hero__orb--b" aria-hidden="true"></div>
+    <div class="hero__floaters" data-floaters aria-hidden="true"></div>
+
+    <div class="shell hero__inner">
+      <div class="hero__content">
+        <p class="hero__kicker">
+          <span class="hero__kicker-line" aria-hidden="true"></span>
+          <span data-bind="eyebrow">Information Technology · Cebu, Philippines</span>
+        </p>
+
+        <h1 class="hero__name">
+          <span class="hero__name-line" data-bind="firstName">Johnnel</span>
+          <span class="hero__name-line hero__name-line--accent" data-bind="lastName">Artiaga</span>
+        </h1>
+
+        <p class="hero__headline" data-bind="headline">
+          IT student building full-stack web experiences.
+        </p>
+
+        <p class="hero__roles" aria-live="polite">
+          <span data-roles></span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <p class="hero__summary" data-bind="lede">
+          I build, ship, and learn in public.
+        </p>
+
+        <div class="hero__meta">
+          <span class="pill pill--live" data-availability hidden>
+            <span class="pill__dot" aria-hidden="true"></span>
+            <span data-bind="availability"></span>
+          </span>
+          <span class="pill" data-location hidden>
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            <span data-bind="location"></span>
+          </span>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            View Projects
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="#contact">
+            Contact Me
+          </a>
+          <a class="btn btn--quiet" data-resume-link hidden download>
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            Download CV
+          </a>
+        </div>
+
+        <ul class="social-row" data-socials aria-label="Social profiles"></ul>
+      </div>
+
+      <div class="hero__aside">
+        <div class="portrait" data-portrait>
+          <div class="portrait__frame">
+            <div class="portrait__inner">
+              <img data-portrait-img alt="" hidden>
+              <span class="portrait__initials" data-bind="initials" aria-hidden="true">JA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="hero__watermark" aria-hidden="true" data-bind="lastName">Artiaga</p>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <span class="scroll-hint__track"><span class="scroll-hint__thumb"></span></span>
+      Scroll
+    </div>
+  </section>
+
+  <!-- ================= MARQUEE ================= -->
+  <section class="marquee" data-marquee-section aria-label="Technologies I work with" hidden>
+    <div class="marquee__viewport">
+      <div class="marquee__track" data-marquee></div>
+    </div>
+  </section>
+
+  <section class="manifesto" data-manifesto-section aria-label="How I work">
+    <div class="manifesto__inner" data-manifesto></div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about" data-reveal-root>
+    <div class="shell">
+      <header class="section__head section__head--wide" data-reveal data-section-head="about">
+        <p class="section__label"></p>
+        <h2 class="section__title section__title--display"></h2>
+      </header>
+
+      <div class="about">
+        <div class="about__body" data-reveal>
+          <p class="about__lead" data-bind="summary"></p>
+        </div>
+        <ul class="services" data-services></ul>
+      </div>
+
+      <div class="stats-field">
+        <canvas class="section-bg" data-bg-canvas aria-hidden="true"></canvas>
+        <div class="stats" data-stats></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WORK ================= -->
+  <section class="section" id="work" data-work-section>
+    <canvas class="section-bg" data-bg-canvas aria-hidden="true"></canvas>
+    <div class="shell">
+      <header class="section__head" data-reveal data-section-head="work">
+        <p class="section__label"></p>
+        <h2 class="section__title"></h2>
+        <p class="section__sub"></p>
+      </header>
+
+      <div class="filters" data-filters role="group" aria-label="Filter projects by topic"></div>
+      <div class="showcases" data-featured></div>
+      <div class="projects" data-projects></div>
+      <p class="projects__empty" data-projects-empty hidden>No projects match that filter.</p>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section--tight" id="skills" data-skills-section hidden>
+    <div class="shell">
+      <header class="section__head" data-reveal data-section-head="skills">
+        <p class="section__label"></p>
+        <h2 class="section__title"></h2>
+        <p class="section__sub"></p>
+      </header>
+      <div class="skills" data-skills></div>
+    </div>
+  </section>
+
+  <!-- ================= EXPERIENCE ================= -->
+  <section class="section" id="experience" data-experience-section hidden>
+    <div class="shell">
+      <header class="section__head" data-reveal data-section-head="experience">
+        <p class="section__label"></p>
+        <h2 class="section__title"></h2>
+        <p class="section__sub"></p>
+      </header>
+      <ol class="timeline" data-experience></ol>
+    </div>
+  </section>
+
+  <!-- ================= EDUCATION ================= -->
+  <section class="section section--tight" id="education" data-education-section hidden>
+    <div class="shell">
+      <header class="section__head" data-reveal data-section-head="education">
+        <p class="section__label"></p>
+        <h2 class="section__title"></h2>
+        <p class="section__sub"></p>
+      </header>
+      <ul class="education" data-education></ul>
+    </div>
+  </section>
+
+  <!-- ================= TESTIMONIALS ================= -->
+  <section class="section" id="testimonials" data-testimonials-section hidden>
+    <div class="shell">
+      <header class="section__head" data-reveal data-section-head="testimonials">
+        <p class="section__label"></p>
+        <h2 class="section__title"></h2>
+        <p class="section__sub"></p>
+      </header>
+      <ul class="quotes" data-testimonials></ul>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section contact" id="contact">
+    <div class="contact__aurora" aria-hidden="true"></div>
+    <div class="contact__grid" aria-hidden="true"></div>
+    <div class="shell">
+      <div class="contact__inner" data-reveal data-section-head="contact">
+        <p class="section__label"></p>
+        <h2 class="contact__title"></h2>
+        <p class="contact__pitch" data-bind="pitch"></p>
+
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" data-mail-link href="#">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            Email Me
+          </a>
+          <button class="btn btn--ghost btn--lg" type="button" data-copy-email>
+            <svg class="icon icon--copy" aria-hidden="true"><use href="#i-copy"/></svg>
+            <svg class="icon icon--check" aria-hidden="true"><use href="#i-check"/></svg>
+            <span data-copy-label>Copy Email</span>
+          </button>
+        </div>
+
+        <p class="contact__email" data-bind="email">holloying20s@gmail.com</p>
+        <ul class="social-row social-row--lg" data-socials-footer aria-label="Social profiles"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell site-footer__inner">
+    <p>&copy; <span data-year>2026</span> <span data-bind="name">Johnnel Artiaga</span>. Built from scratch.</p>
+    <a class="site-footer__top" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </div>
+</footer>
+
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+
+<noscript>
+  <div class="noscript">
+    This portfolio renders its content with JavaScript. Please enable it, or email me directly.
+  </div>
+</noscript>
+
+<script src="content.js" defer></script>
+<script src="assets/js/background.js" defer></script>
+<script src="assets/js/app.js" defer></script>
+</body>
+</html>
